@@ -1,11 +1,21 @@
 import React from "react";
 
-const ProfileCard = ({ title, handle }) => {
+const ProfileCard = ({ title, handle, image, description }) => {
   return (
-    <div>
-      <h3>
-        My name is {title} and my twitter name: <strong>{handle}</strong>
-      </h3>
+    <div className="card">
+      <div className="card-image">
+        <figure className="image is-1by1">
+          <img src={image} alt="pda logo" />
+        </figure>
+      </div>
+
+      <div className="card-content">
+        <div className="media-content">
+          <p className="title is-4">{title}</p>
+          <p className="subtitle is-6">{handle}</p>
+        </div>
+        <div className="content">{description}</div>
+      </div>
     </div>
   );
 };
